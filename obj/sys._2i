@@ -1,0 +1,5 @@
+-c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB --li -g -O2 --apcs=interwork -I ..\..\Library\Device\Nuvoton\ma35d1_rtp\Include -I ..\..\Library\StdDriver\inc -I ..\..\Library\CMSIS\Include -I .\Devices
+-IE:\Keil_v5\ARM\RV31\INC
+-IE:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="538"
+-o .\obj\sys.o --omf_browse .\obj\sys.crf --depend .\obj\sys.d --feedback ".\obj\M4_Drivers.fed" "..\..\Library\StdDriver\src\sys.c"

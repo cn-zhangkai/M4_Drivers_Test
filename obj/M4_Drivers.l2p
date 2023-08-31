@@ -1,0 +1,16 @@
+--cpu=Cortex-M4.fp.sp
+".\obj\system_ma35d1_rtp.o"
+".\obj\startup_ma35d1_rtp.o"
+".\obj\main.o"
+".\obj\clk.o"
+".\obj\gpio.o"
+".\obj\retarget.o"
+".\obj\sys.o"
+".\obj\uart.o"
+".\obj\wwdt.o"
+".\obj\watchdog.o"
+".\obj\dio.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_ma35d1_rtp.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\M4_Drivers.map" -o .\obj\M4_Drivers.axf
