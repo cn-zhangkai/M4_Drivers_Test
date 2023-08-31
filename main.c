@@ -49,7 +49,7 @@ int32_t main(void)
     UART16_Init();
 	
     printf("\n\nCPU @ %dHz\n", SystemCoreClock);
-    printf("Test the driver of DIO and WWDG\n");
+    printf("Test the driver of DIO and WWDT\n");
     
 	/* Init WWDT to test */
 	WWDT_init();
