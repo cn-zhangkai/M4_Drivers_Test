@@ -43854,9 +43854,11 @@ typedef enum
 
 typedef struct
 {
-	GPIO_T        *Port;
-	uint32_t      u32PinMask;
-	
+	char      *ProductName;
+	char      SampleName;
+	uint8_t   MajorVerNum;
+	uint8_t   MinorVerNum;
+	char      *Date;
 }Std_VersionInfoType;
 
 typedef struct
@@ -44060,8 +44062,11 @@ void Dio_WriteChannel(Dio_ChannelType channnel, Dio_LevelType level);
  
 void Dio_GetVersionInfo(Std_VersionInfoType* version)
 {
-	
-	printf("\n\nCPU @ %d Hz\n", SystemCoreClock);
+    printf("# Get the version information of DIO drivers: \n");
+    printf("    - The current application product is %s \n",version -> ProductName);
+    printf("    - The current sample stage is %c sample \n", version -> SampleName);
+    printf("        and the driver version now is %d.%d \n", version -> MajorVerNum, version -> MinorVerNum);
+    printf("    - Last modified date:%s \n", version -> Date);  
 }
 
 

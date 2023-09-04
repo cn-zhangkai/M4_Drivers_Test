@@ -44119,9 +44119,11 @@ typedef enum
 
 typedef struct
 {
-	GPIO_T        *Port;
-	uint32_t      u32PinMask;
-	
+	char      *ProductName;
+	char      SampleName;
+	uint8_t   MajorVerNum;
+	uint8_t   MinorVerNum;
+	char      *Date;
 }Std_VersionInfoType;
 
 typedef struct
@@ -44190,7 +44192,7 @@ int32_t main(void)
     UART16_Init();
 	
     printf("\n\nCPU @ %dHz\n", SystemCoreClock);
-    printf("Test the driver of DIO and WWDG\n");
+    printf("Test the driver of DIO and WWDT\n");
     
 	 
 	WWDT_init();

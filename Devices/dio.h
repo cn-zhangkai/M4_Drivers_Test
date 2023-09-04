@@ -35,10 +35,12 @@ typedef enum
 
 typedef struct
 {
-	GPIO_T        *Port;
-	uint32_t      u32PinMask;
-	
-}Std_VersionInfoType;
+	char      *ProductName;
+	char      SampleName;
+	uint8_t   MajorVerNum;
+	uint8_t   MinorVerNum;
+	char      *Date;
+}Std_VersionInfoType;//{"7.kKW",'A', 1, 1, "2023.08.07"};
 
 typedef struct
 {

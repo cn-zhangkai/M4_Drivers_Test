@@ -55,7 +55,6 @@ Section Cross References
     watchdog.o(.text) refers to wwdt.o(.text) for WWDT_Open
     watchdog.o(.text) refers to watchdog.o(.conststring) for .conststring
     dio.o(.text) refers to printfa.o(i.__0printf) for __2printf
-    dio.o(.text) refers to system_ma35d1_rtp.o(.data) for SystemCoreClock
     dio.o(.text) refers to clk.o(.text) for CLK_EnableModuleClock
     dio.o(.text) refers to system_ma35d1_rtp.o(.text) for SystemCoreClockUpdate
     dio.o(.text) refers to gpio.o(.text) for GPIO_SetMode
@@ -412,12 +411,12 @@ Removing Unused input sections from the image.
     Removing dio.o(.rev16_text), (4 bytes).
     Removing dio.o(.revsh_text), (4 bytes).
     Removing dio.o(.rrx_text), (6 bytes).
-    Removing dio.o(.text), (32 bytes).
+    Removing dio.o(.text), (272 bytes).
     Removing dio.o(.text), (376 bytes).
     Removing dio.o(.text), (28 bytes).
     Removing dio.o(.text), (28 bytes).
 
-85 unused section(s) (total 18862 bytes) removed from the image.
+85 unused section(s) (total 19102 bytes) removed from the image.
 
 ==============================================================================
 

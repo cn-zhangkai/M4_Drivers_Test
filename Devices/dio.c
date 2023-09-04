@@ -23,7 +23,7 @@
 #include "pins.h"
 
 /**
- * @brief Get the version information of DIO
+ * @brief Get the version information of DIO drivers
  *
  * @param[in] version
  *
@@ -34,8 +34,11 @@
  
 void Dio_GetVersionInfo(Std_VersionInfoType* version)
 {
-	//基本配置信息：哪些IO口使用
-	printf("\n\nCPU @ %d Hz\n", SystemCoreClock);
+    printf("# Get the version information of DIO drivers: \n");
+    printf("    - The current application product is %s \n",version -> ProductName);
+    printf("    - The current sample stage is %c sample \n", version -> SampleName);
+    printf("        and the driver version now is %d.%d \n", version -> MajorVerNum, version -> MinorVerNum);
+    printf("    - Last modified date:%s \n", version -> Date);  
 }
 
 /**
